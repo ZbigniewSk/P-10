@@ -1,9 +1,19 @@
+import { useNavigationBar } from '@magento/peregrine/lib/talons/_new_talons/NavigationBar/useNavigationBar'
 import React from 'react'
 
-const NavigationBar = () => {
+const NavigationBar = props => {
+    const { 
+        catalogActions,
+        categoryId,
+        categories    
+    } = useNavigationBar()
+
+    console.log("categories: ", categories[categoryId])
+
+
     return (
         <div>
-            Tu beda buttony
+            {categoryId}
         </div>
     )
 }

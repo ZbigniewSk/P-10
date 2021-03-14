@@ -16,6 +16,7 @@ import defaultClasses from './header.css';
 import PageLoadingIndicator from '../PageLoadingIndicator';
 import StoreSwitcher from './storeSwitcher';
 import CurrencySwitcher from './currencySwitcher';
+import NavigationBar from '../_new_components/NavigationBar/navigationBar'
 
 const SearchBar = React.lazy(() => import('../SearchBar'));
 
@@ -71,6 +72,9 @@ const Header = props => {
                     <Link to={resourceUrl('/')}>
                         <Logo classes={{ logo: classes.logo }} />
                     </Link>
+                    <div className={classes.navbar}>
+                        <NavigationBar />
+                    </div>
                     <div className={classes.secondaryActions}>
                         <SearchTrigger
                             onClick={handleSearchTriggerClick}
